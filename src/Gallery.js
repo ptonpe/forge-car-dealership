@@ -51,6 +51,17 @@ const Gallery = () => {
       });
   };
 
+  const handleSortByPriceDesc = () => {
+    fetch('https://dealership.naman.zip/cars/sort?direction=desc&key=price')
+      .then((res) => res.json())
+      .then((data) => {
+        setCars(data);
+      })
+      .catch((err) => {
+        console.error('Error sorting cars (descending):', err);
+      });
+  };
+
   //filter cars based on user's preferences
   const filteredCars = cars.filter((car) => {
     const matchesMake =
@@ -142,9 +153,19 @@ const Gallery = () => {
               colorScheme="blue"
               onClick={handleSortByPrice}
             >
-              Sort by Price
+              Sort by Price (Low-to-high)
+            </Button>
+
+            <Button
+                colorScheme="blue"
+                onClick={handleSortByPriceDesc}
+                ml='10px'
+            >
+            Sort by Price (High-to-low)
             </Button>
           </Box>
+
+
         </Flex>
       </Box>
 
