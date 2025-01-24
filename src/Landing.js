@@ -79,7 +79,7 @@ const Landing = () => {
               </Button>
               <Button
                 as="a"
-                href="https://github.com/ptonpe"
+                href="https://github.com/ptonpe/forge-car-dealership"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="outline"
