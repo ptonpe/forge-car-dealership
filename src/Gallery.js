@@ -1,5 +1,3 @@
-// Gallery.js
-
 import React, { useState, useEffect } from 'react';
 import {
   Box,
@@ -136,8 +134,8 @@ const Gallery = () => {
               aria-label="max-price-slider"
               value={maxPrice}
               onChange={(val) => setMaxPrice(val)}
-              min={10000}
-              max={50000} 
+              min={8000}
+              max={100000} 
               step={1000}
               width="200px"
             >
@@ -186,7 +184,7 @@ const Gallery = () => {
             // Toggle expanded info on click
             onClick={() => handleCardClick(car.id)}
           >
-            {/* Car Image */}
+            
             <Image
               src={car.image}
               alt={`${car.brand} ${car.model}`}
@@ -209,9 +207,6 @@ const Gallery = () => {
                 <Text fontWeight="bold" mb={1}>
                   Price: ${car.price}
                 </Text>
-                <Text color="gray.600">
-                  {car.description}
-                </Text>
               </Box>
             ) : (
               <Box p={4}>
@@ -223,9 +218,7 @@ const Gallery = () => {
                     ${car.price}
                   </Text>
                 </Flex>
-                <Text color="gray.600" noOfLines={2}>
-                  {car.description}
-                </Text>
+                
               </Box>
             )}
           </Box>

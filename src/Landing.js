@@ -1,4 +1,3 @@
-// landing.js
 import React from 'react';
 import {
   Box,
@@ -22,6 +21,7 @@ const floatKeyframes = emotionKeyframes`
   100% { transform: translateY(0); }
 `;
 
+// import Roboto Google Font for landing page and gallery text
 const GlobalStyles = () => (
   <Global
     styles={`
@@ -34,7 +34,7 @@ const GlobalStyles = () => (
 );
 
 const Landing = () => {
-  // attach it in a variable for easy usage
+  // attach animation in a variable for easy usage
   const floatAnimation = `${floatKeyframes} 3s ease-in-out infinite`;
 
   return (
@@ -81,7 +81,6 @@ const Landing = () => {
                 as="a"
                 href="https://github.com/ptonpe/forge-car-dealership"
                 target="_blank"
-                rel="noopener noreferrer"
                 variant="outline"
                 size="lg"
                 textColor={'black'}
